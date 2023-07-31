@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "212126461524",
+    "project_id": "aqqhome-fb9ec",
+    "storage_bucket": "aqqhome-fb9ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212126461524:android:e41ec86dd871b5764d47c1",
+        "android_client_info": {
+          "package_name": "com.example.aqqhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212126461524-gstdbvj3j3v34loqshma754ft8sfeh86.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aqqhome",
+            "certificate_hash": "c76181925ec408d2290f7dbaab86e459151f7e97"
+          }
+        },
+        {
+          "client_id": "212126461524-l38rajrtlvj3oq81k436hjevvn06l5m3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg0CJBBce4auS2bdygqlB3KUhjTcF7iB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212126461524-l38rajrtlvj3oq81k436hjevvn06l5m3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+<resources>
+    <!-- Các style khác của bạn -->
+
+    <style name="RoundedDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/rounded_dialog_background</item>
+    </style>
+</resources>

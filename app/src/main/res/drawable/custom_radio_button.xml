@@ -1,0 +1,30 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#00FF00" /> <!-- Màu nền khi RadioButton được chọn -->
+                    <stroke
+                        android:width="2dp"
+                        android:color="#00FF00" /> <!-- Màu viền khi RadioButton được chọn -->
+                    <size android:width="24dp" android:height="24dp" /> <!-- Kích thước ô tròn -->
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_check" /> <!-- Ít hơn để tạo hình ảnh tích (tick) -->
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#CCCCCC" /> <!-- Màu nền mặc định -->
+                    <stroke
+                        android:width="2dp"
+                        android:color="#CCCCCC" /> <!-- Màu viền mặc định -->
+                    <size android:width="24dp" android:height="24dp" /> <!-- Kích thước ô tròn -->
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_check" android:gravity="center" /> <!-- Ít hơn để tạo hình ảnh tích (tick) -->
+        </layer-list>
+    </item>
+</selector>
