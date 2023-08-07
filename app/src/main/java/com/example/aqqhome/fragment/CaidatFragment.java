@@ -27,7 +27,6 @@ public class CaidatFragment extends Fragment {
     private SharedPreferences sharedPreferences,sharedPreferencess;
 
     public CaidatFragment() {
-        // Required empty public constructor
     }
 
     @Override
