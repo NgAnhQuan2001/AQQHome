@@ -1,9 +1,11 @@
 package com.example.aqqhome.retrofit;
 
 import com.example.aqqhome.model.ApiHistory;
+import com.example.aqqhome.model.ApiNewFeed;
 import com.example.aqqhome.model.ApiResponse;
 import com.example.aqqhome.model.bankmodel;
 import com.example.aqqhome.model.feemodel;
+import com.example.aqqhome.model.newfeedmodel;
 import com.example.aqqhome.model.roommodel;
 import com.example.aqqhome.model.roommodel2;
 import com.example.aqqhome.model.servicesmodel;
@@ -36,6 +38,7 @@ public interface ApiAQQHome {
     Call<usermodel2> getmoney(
             @Field("UserID") String UserID
     );
+
     @POST("dangnhap.php")
     @FormUrlEncoded
     Call<usermodel2> dangnhap(
@@ -99,16 +102,19 @@ public interface ApiAQQHome {
             @Field("RoomID") String RoomID,
             @Field("amount") String amount
     );
+
     @POST("gettenchungcu.php")
     @FormUrlEncoded
     Call<roommodel> gettenchungcu(
             @Field("ApartmentID") String ApartmentID
     );
+
     @POST("trangthaichiphi.php")
     @FormUrlEncoded
     Call<servicesmodel> trangthaichiphi(
             @Field("RoomID") String RoomID
     );
+
     @POST("capnhaptrangthai.php")
     @FormUrlEncoded
     Call<servicesmodel> capnhaptrangthai(
@@ -117,6 +123,7 @@ public interface ApiAQQHome {
             @Field("IsGarbageServiceUsed") String IsGarbageServiceUsed
 
     );
+
     @POST("getchiphi.php")
     @FormUrlEncoded
     Call<feemodel> getchiphi(
@@ -130,10 +137,31 @@ public interface ApiAQQHome {
             @Field("ApartmentID") String ApartmentID
 
     );
+
     @POST("admingetchiphi.php")
     @FormUrlEncoded
     Call<feemodel> admingetchiphi(
             @Field("ApartmentID") String ApartmentID
+
+    );
+
+    @POST("getnewfeed.php")
+    @FormUrlEncoded
+    Call<ApiNewFeed> getnewfeed(
+            @Field("ApartmentID") String ApartmentID
+
+    );
+
+    @POST("postbangtin.php")
+    @FormUrlEncoded
+    Call<newfeedmodel> postbangtin(
+            @Field("ApartmentID") String ApartmentID,
+            @Field("RoomName") String RoomName,
+            @Field("UserID") String UserID,
+            @Field("text") String text,
+            @Field("Name") String Name
+
+
 
     );
 

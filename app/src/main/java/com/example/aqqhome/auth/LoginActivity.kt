@@ -1,4 +1,4 @@
-package com.example.aqqhome
+package com.example.aqqhome.auth
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -8,9 +8,13 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.aqqhome.user.NewCodeActivity
+import com.example.aqqhome.R
+import com.example.aqqhome.admin.AdminActivity
 import com.example.aqqhome.model.usermodel2
 import com.example.aqqhome.retrofit.ApiAQQHome
 import com.example.aqqhome.retrofit.RetrofitClient
+import com.example.aqqhome.utils.KeyboardUtils.hideKeyboard
 import com.example.aqqhome.utils.customdialog
 import retrofit2.Call
 import retrofit2.Callback
@@ -43,6 +47,7 @@ class LoginActivity : AppCompatActivity() {
         SignInbtn.setOnClickListener {
             val email = emailid.text.toString()
             val pwd = passwordid.text.toString()
+            hideKeyboard(this)
 
             when {
                 email.isEmpty() && pwd.isEmpty() -> {

@@ -1,4 +1,4 @@
-package com.example.aqqhome
+package com.example.aqqhome.admin
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

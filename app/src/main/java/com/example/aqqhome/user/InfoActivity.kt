@@ -1,12 +1,12 @@
-package com.example.aqqhome
+package com.example.aqqhome.user
 
-import android.content.SharedPreferences
+import android.content.Context
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.aqqhome.R
+import com.example.aqqhome.utils.KeyboardUtils.hideKeyboard
 import com.example.aqqhome.utils.MyPref
 
 class InfoActivity : AppCompatActivity() {
@@ -22,6 +22,7 @@ class InfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_info)
         initializeViews()
         loadUserData()
+        hideKeyboard(this)
     }
 
     private fun initializeViews() {

@@ -9,4 +9,6 @@ object MyPref {
         sharedPreferences = context.getSharedPreferences(key, Context.MODE_PRIVATE)
         return sharedPreferences.getString(column, null)
     }
+
+
 }

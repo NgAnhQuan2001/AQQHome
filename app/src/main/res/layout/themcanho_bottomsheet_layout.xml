@@ -33,7 +33,7 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="@dimen/_1sdp"
         android:background="#9C9393"
         />
 

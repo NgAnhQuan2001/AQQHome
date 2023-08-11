@@ -1,4 +1,4 @@
-package com.example.aqqhome
+package com.example.aqqhome.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.aqqhome.R
 import com.example.aqqhome.model.usermodel2
 import com.example.aqqhome.retrofit.ApiAQQHome
 import com.example.aqqhome.retrofit.RetrofitClient

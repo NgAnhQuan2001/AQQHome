@@ -1,4 +1,4 @@
-package com.example.aqqhome;
+package com.example.aqqhome.payment;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,13 +12,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aqqhome.R;
 import com.example.aqqhome.Zalopay.AppInfo;
 import com.example.aqqhome.Zalopay.CreateOrder;
-import com.example.aqqhome.model.bankmodel;
 import com.example.aqqhome.model.roommodel2;
 import com.example.aqqhome.retrofit.ApiAQQHome;
 import com.example.aqqhome.retrofit.RetrofitClient;
-import com.example.aqqhome.utils.customdialog;
 
 import org.json.JSONObject;
 

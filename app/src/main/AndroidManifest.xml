@@ -17,25 +17,28 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".AddRoomActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AdRoomActivity"
-            android:exported="false" />
-        <activity
-            android:name=".QuyChungCuActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LichsunapActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_XemthongtinActivity"
+            android:name=".user.NewmesActivity"
             android:exported="true" />
         <activity
-            android:name=".Admin_SuachiphiActivity"
+            android:name=".NewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".admin.AddRoomActivity"
             android:exported="false" />
         <activity
-            android:name=".ThanhToanActivity"
+            android:name=".admin.QuyChungCuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".payment.LichsunapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.Admin_XemthongtinActivity"
+            android:exported="true" />
+        <activity
+            android:name=".admin.Admin_SuachiphiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".payment.ThanhToanActivity"
             android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
@@ -50,16 +53,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoadActivity"
+            android:name=".user.LoadActivity"
             android:exported="false" />
         <activity
-            android:name=".QuanLyActivity"
+            android:name=".admin.QuanLyActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminActivity"
+            android:name=".admin.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".MoneyActivity"
+            android:name=".payment.MoneyActivity"
             android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
@@ -74,19 +77,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InfoActivity"
+            android:name=".user.InfoActivity"
             android:exported="false" />
         <activity
-            android:name=".BillActivity"
+            android:name=".payment.BillActivity"
             android:exported="true" />
         <activity
-            android:name=".NewCodeActivity"
+            android:name=".user.NewCodeActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".user.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".IntroActivity"
+            android:name=".user.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -95,10 +98,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".auth.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".auth.SignupActivity"
             android:exported="true" />
     </application>
 

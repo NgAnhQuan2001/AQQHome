@@ -1,4 +1,4 @@
-package com.example.aqqhome
+package com.example.aqqhome.payment
 
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.aqqhome.R
 import com.example.aqqhome.adapter.HistoryAdapter
 import com.example.aqqhome.model.ApiHistory
-import com.example.aqqhome.model.bankmodel
 import com.example.aqqhome.retrofit.ApiAQQHome
 import com.example.aqqhome.retrofit.RetrofitClient
 import retrofit2.Call

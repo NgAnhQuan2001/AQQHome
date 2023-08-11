@@ -1,4 +1,4 @@
-package com.example.aqqhome
+package com.example.aqqhome.user
 
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
@@ -7,9 +7,13 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.Button
 import android.widget.EditText
+import com.example.aqqhome.R
+import com.example.aqqhome.auth.LoginActivity
 import com.example.aqqhome.model.roommodel2
 import com.example.aqqhome.retrofit.ApiAQQHome
 import com.example.aqqhome.retrofit.RetrofitClient
+import com.example.aqqhome.utils.KeyboardUtils.hideKeyboard
+
 import com.example.aqqhome.utils.customdialog
 import retrofit2.Call
 import retrofit2.Callback
@@ -55,6 +59,12 @@ class NewCodeActivity : AppCompatActivity() {
         val apiAQQHome = retrofit.create(ApiAQQHome::class.java)
         val call = apiAQQHome.checkcode(code)
 
+        hideKeyboard(this)
+
+
+
+
+
         call.enqueue(object : Callback<roommodel2> {
             override fun onResponse(call: Call<roommodel2>, response: Response<roommodel2>) {
                 response.body()?.let {
@@ -85,4 +95,6 @@ class NewCodeActivity : AppCompatActivity() {
             }
         })
     }
+
+
 }

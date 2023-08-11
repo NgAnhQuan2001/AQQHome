@@ -14,7 +14,8 @@
     <item
         android:id="@+id/fab"
         android:title="Quét Qr"
-        android:icon="@drawable/baseline_qr_code_scanner_24"/>
+        android:enabled="false"
+        />
 
     <item
         android:id="@+id/thongbao"

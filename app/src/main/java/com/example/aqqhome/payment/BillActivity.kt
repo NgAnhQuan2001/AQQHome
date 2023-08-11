@@ -1,10 +1,11 @@
-package com.example.aqqhome
+package com.example.aqqhome.payment
 
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.aqqhome.R
 import com.example.aqqhome.databinding.ActivityBillBinding
 import com.example.aqqhome.model.feemodel
 import com.example.aqqhome.model.roommodel2

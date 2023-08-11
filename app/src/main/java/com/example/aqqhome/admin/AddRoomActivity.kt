@@ -1,4 +1,4 @@
-package com.example.aqqhome
+package com.example.aqqhome.admin
 
 import android.os.Bundle
 import android.widget.Toast
@@ -20,6 +20,7 @@ class AddRoomActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddroomBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         val sharedPreferences = getSharedPreferences("UserInfo", MODE_PRIVATE)
         val retrofit = RetrofitClient.getRetrofitInstance()

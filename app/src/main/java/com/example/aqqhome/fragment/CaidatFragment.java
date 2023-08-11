@@ -7,24 +7,22 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-
+import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.aqqhome.LoginActivity;
-import com.example.aqqhome.MainActivity;
-import com.example.aqqhome.NewCodeActivity;
+import com.example.aqqhome.auth.LoginActivity;
 import com.example.aqqhome.R;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class CaidatFragment extends Fragment {
     private TextView dangxuat, tttn;
     private ImageView back;
     Fragment fragment;
 
-    private SharedPreferences sharedPreferences,sharedPreferencess;
+    private SharedPreferences sharedPreferences, sharedPreferencess;
 
     public CaidatFragment() {
     }
@@ -37,42 +35,42 @@ public class CaidatFragment extends Fragment {
         dangxuat = view.findViewById(R.id.dangxuat);
         tttn = view.findViewById(R.id.tttn);
 
-        sharedPreferences = getActivity().getSharedPreferences("UserInfo", MODE_PRIVATE);
-        sharedPreferencess = getActivity().getSharedPreferences("RoomID", MODE_PRIVATE);
+        sharedPreferences = requireActivity().getSharedPreferences("UserInfo", MODE_PRIVATE);
+        sharedPreferencess = requireActivity().getSharedPreferences("RoomID", MODE_PRIVATE);
         dangxuat.setOnClickListener(v -> {
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            SharedPreferences.Editor editor1 = sharedPreferencess.edit();
-            editor.clear();
-            editor.apply();
-            editor1.clear();
-            editor1.apply();
-            Intent i = new Intent(getActivity(), LoginActivity.class);
-            startActivity(i);
-            getActivity().finish();
-
-
+            new MaterialAlertDialogBuilder(requireContext())
+                    .setTitle("Xác nhận")
+                    .setMessage("Bạn có chắc chắn muốn đăng xuất?")
+                    .setPositiveButton("Xác nhận", (dialog, which) -> {
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        SharedPreferences.Editor editor1 = sharedPreferencess.edit();
+                        editor.clear();
+                        editor.apply();
+                        editor1.clear();
+                        editor1.apply();
+                        Intent i = new Intent(getActivity(), LoginActivity.class);
+                        startActivity(i);
+                        getActivity().finish();
+                    })
+                    .setNegativeButton("Quay lại", (dialog, which) -> {
+                        dialog.dismiss();
+                    })
+                    .show();
         });
-        tttn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fragment = new HouseInfoFragment();
-                load_Fragment(fragment);
 
-
-            }
-       });
-
-
-
-
-
+        tttn.setOnClickListener(v -> {
+            fragment = new HouseInfoFragment();
+            replaceFragment(fragment);
+        });
 
         return view;
     }
-    private void load_Fragment(Fragment fragment){
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.frame_layout, fragment)
-                .commit();
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.addToBackStack(null); // Add the transaction to the back stack
+        fragmentTransaction.commit();
     }
 }

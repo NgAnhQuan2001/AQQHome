@@ -1,4 +1,4 @@
-package com.example.aqqhome
+package com.example.aqqhome.admin
 
 import android.os.Bundle
 import android.widget.Button
@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.aqqhome.adapter.OnRoomClickListener
+import com.example.aqqhome.R
 import com.example.aqqhome.adapter.RoomAdapter
 import com.example.aqqhome.databinding.ActivityAdminXemthongtinBinding
 import com.example.aqqhome.model.ApiResponse

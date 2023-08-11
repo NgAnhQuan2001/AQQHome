@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">AQQHome</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Hoadon" translatable="false">Hóa đơn</string>
+    <string name="Thongbao" translatable="false">Thông báo</string>
+    <string name="Bangtin" translatable="false">Bảng tin</string>
+    <string name="Caidat" translatable="false">Cài đặt</string>
+    <string name="Thongtinphienban" translatable="false">Thông tin phiên bản</string>
+    <string name="Thongtin" translatable="false">Thông tin</string>
+    <string name="Dangxuat" translatable="false">Đăng xuất</string>
+    <string name="Dangnhap" translatable="false">Đăng nhập</string>
+    <string name="Dangky" translatable="false">Đăng ký</string>
+    <string name="Dangnhapthanhcong" translatable="false">Đăng nhập thành công</string>
+    <string name="hintdangnhap" translatable="false">Email hoặc số điện thoaại</string>
+    <string name="hintmatkhau" translatable="false">Mật khẩu</string>
+    <string name="taotaikhoan" translatable="false">Tạo tài khoản</string>
+
+
+
+
+
+
 </resources>

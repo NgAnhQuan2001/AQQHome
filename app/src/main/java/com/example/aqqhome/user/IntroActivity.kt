@@ -1,4 +1,4 @@
-package com.example.aqqhome
+package com.example.aqqhome.user
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -6,6 +6,9 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.example.aqqhome.R
+import com.example.aqqhome.admin.AdminActivity
+import com.example.aqqhome.auth.LoginActivity
 
 class IntroActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
